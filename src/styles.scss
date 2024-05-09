@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+/* CORES */
+$vermelho: #EC0000;
+
+/* FONTES */
+$fonte-padrao: 'Verdana', sans-serif;
+
+/* BORDAS E ESPEÇAMENTOS */
+$radius-padrao: 8px;
+
+body {
+    font-family: $fonte-padrao;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border-radius: $radius-padrao;
+}
