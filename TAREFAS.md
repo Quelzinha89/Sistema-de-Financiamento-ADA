@@ -4,3 +4,5 @@
 - Criação de Componentes ()
 - Criação de Rotas
 - Criação do HTML e CSS das páginas
+- Atualização de componentes(todos)
+  
