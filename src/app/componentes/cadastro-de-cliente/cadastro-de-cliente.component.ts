@@ -4,7 +4,6 @@ import { MatProgressBar } from '@angular/material/progress-bar';
 import { FormsModule } from '@angular/forms';
 
 
-
 @Component({
   selector: 'app-cadastro-de-cliente',
   standalone: true,
