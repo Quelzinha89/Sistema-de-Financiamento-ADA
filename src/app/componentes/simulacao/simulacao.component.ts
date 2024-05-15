@@ -12,4 +12,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 })
 export class SimulacaoComponent {
 
+  public parcelaSelecionada: number = 180;
+
+  public selecionarParcelas(quant_parcelas: number){
+    this.parcelaSelecionada = quant_parcelas
+    console.log(quant_parcelas);
+  }
 }

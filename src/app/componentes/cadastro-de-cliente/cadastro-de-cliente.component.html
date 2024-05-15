@@ -2,16 +2,17 @@
 <mat-progress-bar mode="determinate" value="100"   >
   <div class="cadastro-cabecalho-border" >
     <h1 class="cadastro-titulo">Cadastro de Cliente</h1>
-</div>
+  </div>
 </mat-progress-bar>
 
-  <div>
+<div class="container">
+  <div class="cadastro-cabecalho">
     <h1>Simule o seu financiamento</h1>
     <p>Aproveite as condições do financiamento e pague parcelas que cabem no seu bolso. Preencha o formulário ao lado e conheça.</p>
     <img src="../../../assets/imagens-angular/retangulo.svg"/>
- </div>
+  </div>
 
-  <main class="container">
+  <main class="formulario-cadastro">
     <div>
       <form #cliente="ngForm" (ngSubmit)="adicionarCliente(cliente)">
         <div class="form-group">
@@ -33,8 +34,9 @@
           <input type="text" class="form-control" id="salario" name="salario" ngModel required placeholder="Insira somente números e separe os centavos com ponto" />
         </div>
         <button type="submit" class="btn btn-primary">Simular financiamento</button>
-    </form>
+      </form>
     </div>
-</main>
+  </main>
+</div>
 
 

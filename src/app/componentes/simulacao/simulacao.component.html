@@ -8,14 +8,14 @@ astro-titulo">Cadastro de Cliente</h1>
 <main class="main">
 <div>
   <h2>Você tem</h2>
-  <h4>R$ 460.000,00</h4>
+  <h4>R$ 100.000,00</h4>
   <h2>pré-aprovado</h2>
 </div>
 
 <div>
   <p>Ajustar valor</p>
-  <mat-slider min="1" max="5" step="0.5">
-    <input matSliderThumb value="3.0">
+  <mat-slider min="0" max="100000" step="20000">
+    <input matSliderThumb value="100000">
   </mat-slider>
 </div>
 
@@ -31,28 +31,36 @@ astro-titulo">Cadastro de Cliente</h1>
 <div>
   <p>Selecione o número de parcelas</p>
   <button mat-raised-button
-  matTooltip="Info about the action"
-  aria-label="Button that displays a tooltip when focused or hovered over">
-  300 parcelas
+          (click)="selecionarParcelas(300)"
+          [ngClass]="{'selected': parcelaSelecionada === 300}"
+          matTooltip="Info about the action"
+          aria-label="Button that displays a tooltip when focused or hovered over">
+          300 parcelas
 </button>
 
 <button mat-raised-button
+        (click)="selecionarParcelas(180)"
+        [ngClass]="{'selected': parcelaSelecionada === 180}"
         matTooltip="Info about the action"
         aria-label="Button that displays a tooltip when focused or hovered over">
         180 parcelas
 </button>
 
 <button mat-raised-button
+        (click)="selecionarParcelas(120)"
+        [ngClass]="{'selected': parcelaSelecionada === 120}"
         matTooltip="Info about the action"
         aria-label="Button that displays a tooltip when focused or hovered over">
         120 parcelas
 </button>
 
 <button mat-raised-button
+        (click)="selecionarParcelas(60)"
+        [ngClass]="{'selected': parcelaSelecionada === 60}"
         matTooltip="Info about the action"
         aria-label="Button that displays a tooltip when focused or hovered over">
         60 parcelas
-      </button>
+</button>
 
 </div>
 
