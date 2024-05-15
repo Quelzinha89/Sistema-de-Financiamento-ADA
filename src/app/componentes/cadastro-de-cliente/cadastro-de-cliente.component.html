@@ -1,0 +1,40 @@
+
+<mat-progress-bar mode="determinate" value="100"   >
+  <div class="cadastro-cabecalho-border" >
+    <h1 class="cadastro-titulo">Cadastro de Cliente</h1>
+</div>
+</mat-progress-bar>
+
+  <div>
+    <h1>Simule o seu financiamento</h1>
+    <p>Aproveite as condições do financiamento e pague parcelas que cabem no seu bolso. Preencha o formulário ao lado e conheça.</p>
+    <img src="../../../assets/imagens-angular/retangulo.svg"/>
+ </div>
+
+  <main class="container">
+    <div>
+      <form #transacao="ngForm">
+        <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" class="form-control" id="nome" name="nome" ngModel required placeholder="Insira o seu nome aqui" />
+        </div>
+        <div class="form-group">
+            <label for="tipo">E-mail</label>
+            <input type="text" class="form-control" id="nome" name="nome" ngModel required placeholder="Insira o seu e-mail" />
+          </div>
+
+        <div class="form-group">
+            <label for="valor">Telefone</label>
+            <input type="text" class="form-control" id="valor" name="valor" ngModel required placeholder="Insira seu telefone aqui" />
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">Salário</label>
+          <input type="text" class="form-control" id="nome" name="nome" ngModel required placeholder="Insira somente números e separe os centavos com ponto" />
+        </div>
+        <button type="submit" class="btn btn-primary">Simular financiamento</button>
+    </form>
+    </div>
+</main>
+
+
