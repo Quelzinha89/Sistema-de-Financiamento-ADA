@@ -12,8 +12,8 @@ export class ClienteService {
   private baseUrl = 'http://localhost:3000/cliente'
   constructor(private http: HttpClient) { }
 
-  cadastrarCliente(cliente: any){
-    return this.http.post(this.baseUrl, cliente);
+  cadastrarCliente(cliente: any): Observable<any>{
+    return this.http.put(this.baseUrl, cliente);
   }
   getCliente(): Observable<Cliente>{
     return this.http.get<Cliente>(this.baseUrl);
