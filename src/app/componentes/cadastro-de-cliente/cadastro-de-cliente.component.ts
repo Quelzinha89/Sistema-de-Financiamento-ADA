@@ -16,6 +16,7 @@ import { MatProgressBar } from '@angular/material/progress-bar';
 })
 export class CadastroDeClienteComponent {
 
+    public mensagem = ''
 
     constructor (private http: ClienteService, private router: Router) {}
 
@@ -41,7 +42,7 @@ export class CadastroDeClienteComponent {
         this.router.navigate(['/simulacao'])
       }else{
         //preencher tds campos
-        console.log("Preencha tds os campos");
+        this.mensagem = "*Preencha todos os campos corretamente"
       }
     }
 
