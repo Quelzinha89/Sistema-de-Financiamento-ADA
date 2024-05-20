@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ClienteService } from '../../service/cliente.service';
 import { RouterModule } from '@angular/router';
 import { MatProgressBar } from '@angular/material/progress-bar';
+
 
 @Component({
   selector: 'app-cadastro-de-cliente',

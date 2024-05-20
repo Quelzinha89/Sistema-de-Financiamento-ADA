@@ -1,72 +1,80 @@
 <mat-progress-bar mode="determinate" value="100"   >
  <div class="cadastro-cabecalho-border" >
-   <h1 class="cad
-astro-titulo">Cadastro de Cliente</h1>
+   <h1 class="cadastro-titulo">Cadastro de Cliente</h1>
 </div>
 </mat-progress-bar>
 
-<main class="main">
-<div>
-  <h2>Você tem</h2>
-  <h4>{{ cliente.salario | currency }}</h4>
-  <h2>pré-aprovado</h2>
+
+<div class="main">
+  <div class="box-slider">
+    <div>
+      <h2>{{ textoCredito }}</h2>
+      <h4>{{ valorCreditoEscolhido | currency }}</h4>
+      <h2>pré-aprovado</h2>
+    </div>
+
+    <div>
+      <p>Ajustar valor</p>
+      <input  type="range"
+        [value]="valorCreditoAprovado"
+        [(ngModel)]="valorCreditoEscolhido"
+        min="0"
+        [max]="valorCreditoAprovado"
+        [step]="valorCreditoAprovado/5"
+        (click)="zerarParcelaJuros()"
+        >
+    </div>
+
+    <div>
+      <button mat-stroked-button (click)="setMinimo()">Minimo</button>
+      <button mat-stroked-button (click)="setMaximo()">Máximo</button>
+      <p>Escolha o valor acima e selecione ao lado o número de parcelas que cabem no seu bolso.</p>
+    </div>
+  </div>
+
+  <div class="box-output">
+    <div>
+      <p>Selecione o número de parcelas</p>
+      <button mat-raised-button
+              (click)="selecionarParcelas(300)"
+              [ngClass]="{'selected': parcelaSelecionada === 300}"
+              matTooltip="Info about the action"
+              aria-label="Button that displays a tooltip when focused or hovered over">
+              300 parcelas
+    </button>
+
+    <button mat-raised-button
+            (click)="selecionarParcelas(180)"
+            [ngClass]="{'selected': parcelaSelecionada === 180}"
+            matTooltip="Info about the action"
+            aria-label="Button that displays a tooltip when focused or hovered over">
+            180 parcelas
+    </button>
+
+    <button mat-raised-button
+            (click)="selecionarParcelas(120)"
+            [ngClass]="{'selected': parcelaSelecionada === 120}"
+            matTooltip="Info about the action"
+            aria-label="Button that displays a tooltip when focused or hovered over">
+            120 parcelas
+    </button>
+
+    <button mat-raised-button
+            (click)="selecionarParcelas(60)"
+            [ngClass]="{'selected': parcelaSelecionada === 60}"
+            matTooltip="Info about the action"
+            aria-label="Button that displays a tooltip when focused or hovered over">
+            60 parcelas
+    </button>
+
+    </div>
+
+    <div>
+      <p>{{ parcelaSelecionada + " parcelas" }}</p>
+       <p>
+        {{ parcelaComJuros | currency}}
+      </p>
+      <button mat-flat-button color="warn" (click)="irParaTelaCadastro()">Financiar Agora</button>
+    </div>
+  </div>
 </div>
-
-<div>
-  <p>Ajustar valor</p>
-  <mat-slider min="0" max="100000" step="20000">
-    <input matSliderThumb value="100000">
-  </mat-slider>
-</div>
-
-<div>
-  <button mat-stroked-button>Minimo</button>
-  <button mat-stroked-button>Máximo</button>
-</div>
-
-<div>
-  <p>Escolha o valor acima e selecione ao lado o número de parcelas que cabem no seu bolso.</p>
-</div>
-
-<div>
-  <p>Selecione o número de parcelas</p>
-  <button mat-raised-button
-          (click)="selecionarParcelas(300)"
-          [ngClass]="{'selected': parcelaSelecionada === 300}"
-          matTooltip="Info about the action"
-          aria-label="Button that displays a tooltip when focused or hovered over">
-          300 parcelas
-</button>
-
-<button mat-raised-button
-        (click)="selecionarParcelas(180)"
-        [ngClass]="{'selected': parcelaSelecionada === 180}"
-        matTooltip="Info about the action"
-        aria-label="Button that displays a tooltip when focused or hovered over">
-        180 parcelas
-</button>
-
-<button mat-raised-button
-        (click)="selecionarParcelas(120)"
-        [ngClass]="{'selected': parcelaSelecionada === 120}"
-        matTooltip="Info about the action"
-        aria-label="Button that displays a tooltip when focused or hovered over">
-        120 parcelas
-</button>
-
-<button mat-raised-button
-        (click)="selecionarParcelas(60)"
-        [ngClass]="{'selected': parcelaSelecionada === 60}"
-        matTooltip="Info about the action"
-        aria-label="Button that displays a tooltip when focused or hovered over">
-        60 parcelas
-</button>
-
-</div>
-
-<div>
-  <p>120 parcelas</p>
-  <button mat-flat-button color="warn">Financiar Agora</button>
-</div>
-
-</main>
