@@ -1,4 +1,3 @@
-
 <mat-progress-bar mode="determinate" value="100"   >
   <div class="cadastro-cabecalho-border" >
     <img src=""/>
@@ -9,36 +8,71 @@
 <div class="container">
   <div class="cadastro-cabecalho">
     <h1>Simule o seu financiamento</h1>
-    <p>Aproveite as condições do financiamento e pague parcelas que cabem no seu bolso. Preencha o formulário ao lado e conheça.</p>
-    <img src="../../../assets/imagens-angular/retangulo.svg"/>
+    <p>
+      Aproveite as condições do <br />financiamento e pague parcelas <br />que
+      cabem no seu bolso. Preencha <br />o formulário ao lado e conheça.
+    </p>
+    <img src="../../../assets/imagens-angular/retangulo.svg" />
   </div>
 
   <main class="formulario-cadastro">
     <div>
       <form #cliente="ngForm" (ngSubmit)="adicionarCliente(cliente)">
         <div class="form-group">
-            <label for="nome">Nome Completo</label>
-            <input type="text" class="form-control" id="nome" name="nome" ngModel required placeholder="Insira o seu nome aqui" />
+          <label for="nome">Nome Completo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            name="nome"
+            ngModel
+            required
+            placeholder="Insira o seu nome aqui"
+          />
         </div>
         <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="text" class="form-control" id="email" name="email" ngModel required placeholder="Insira o seu e-mail" />
-          </div>
+          <label for="email">E-mail</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            name="email"
+            ngModel
+            required
+            placeholder="Insira o seu e-mail"
+          />
+        </div>
 
         <div class="form-group">
-            <label for="telefone">Telefone</label>
-            <input type="input" class="form-control" id="telefone" name="telefone" ngModel required placeholder="Insira seu telefone aqui" />
+          <label for="telefone">Telefone</label>
+          <input
+            type="number"
+            class="form-control"
+            id="telefone"
+            name="telefone"
+            ngModel
+            required
+            placeholder="Insira seu telefone aqui"
+          />
         </div>
 
         <div class="form-group">
           <label for="salario">Salário</label>
-          <input type="input" class="form-control" id="salario" name="salario" ngModel required placeholder="Insira somente números e separe os centavos com ponto" />
+          <input
+            type="number"
+            class="form-control"
+            id="salario"
+            name="salario"
+            ngModel
+            required
+            placeholder="Insira somente números e separe os centavos com ponto"
+          />
         </div>
-        <button type="submit" class="btn btn-primary">Simular financiamento</button>
+        <button type="submit" class="btn btn-primary">
+          Simular financiamento
+        </button>
       </form>
       <p>{{ mensagem }}</p>
     </div>
   </main>
 </div>
-
-
