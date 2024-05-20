@@ -1,6 +1,21 @@
+.container{
+  display:flex;
+
+.box-slide{
+  display:flex;
+  flex-direction: column;
+}
+
+}
 .selected {
     background-color:  rgba(210, 138, 138, 0.05);
     border: 1px solid #EC0000;
     border-radius: 8px;
 
+
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
 }
