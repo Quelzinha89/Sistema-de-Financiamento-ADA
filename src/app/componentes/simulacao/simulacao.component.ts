@@ -7,15 +7,19 @@ import { NgClass } from '@angular/common';
 import { ClienteService } from '../../service/cliente.service';
 import { Cliente } from '../../model/cliente';
 import { CurrencyPipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-simulacao',
   standalone: true,
-  imports: [MatProgressBar,MatSliderModule,MatButtonModule,MatTooltipModule, NgClass, CurrencyPipe],
+  imports: [MatProgressBar,MatSliderModule,MatButtonModule,MatTooltipModule, NgClass, CurrencyPipe, FormsModule,RouterModule],
   templateUrl: './simulacao.component.html',
   styleUrl: './simulacao.component.scss'
 })
 export class SimulacaoComponent {
+
+  constructor(private clienteService: ClienteService, private router: Router){}
 
   cliente: Cliente = {
     "nome": "",
@@ -25,23 +29,58 @@ export class SimulacaoComponent {
   };
 
   ngOnInit():void {
-    this.getCliente();
-
-  }
-
-  constructor(private clienteService: ClienteService){}
-
-  public parcelaSelecionada: number = 180;
-
-
-  public selecionarParcelas(quant_parcelas: number){
-    this.parcelaSelecionada = quant_parcelas
-    console.log(quant_parcelas);
-  }
-
-  getCliente():void {
     this.clienteService.getCliente()
     .subscribe(cliente =>
-      this.cliente.salario= cliente.salario);
+    this.pegarReferenciaCliente(cliente));
   }
+
+  public salario = 0;
+  public parcelaSelecionada: number = 180;
+  public valorCreditoAprovado = 0;
+  public valorCreditoEscolhido = 0;
+  public parcelaComJuros = 0;
+  public textoParcelas = "";
+  public textoCredito = "Você tem"
+
+  pegarReferenciaCliente(cliente: Cliente):void {
+    if(cliente.salario >= 1500){
+      this.salario = cliente.salario*25;
+      this.valorCreditoAprovado = this.salario;
+      this.valorCreditoEscolhido = this.valorCreditoAprovado;
+      this.selecionarParcelas(this.parcelaSelecionada)
+    }else{
+      this.textoCredito = "Você não tem limite"
+    }
+  }
+
+
+  public selecionarParcelas(quantParcelas: number): void{
+    this.parcelaSelecionada = quantParcelas;
+    let parcelaSemJuros = this.valorCreditoEscolhido/quantParcelas;
+    this.parcelaComJuros = parcelaSemJuros + (this.valorCreditoEscolhido/100)
+
+
+  }
+  zerarParcelaJuros(){
+    this.parcelaComJuros = 0;
+    this.parcelaSelecionada = 0;
+  }
+
+  setMaximo(): void {
+    this.valorCreditoEscolhido = this.valorCreditoAprovado;
+    this.parcelaComJuros = 0;
+    this.textoParcelas = ""
+
+  }
+  setMinimo(): void {
+    this.valorCreditoEscolhido = 0;
+    this.parcelaComJuros = 0;
+    this.textoParcelas = ""
+
+  }
+  irParaTelaCadastro(){
+    this.router.navigate(['/'])
+  }
+
+
 }

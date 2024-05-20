@@ -4,24 +4,30 @@
 </div>
 </mat-progress-bar>
 
+
 <div class="main">
   <div class="box-slider">
     <div>
-      <h2>Você tem</h2>
-      <h4>{{ cliente.salario | currency }}</h4>
+      <h2>{{ textoCredito }}</h2>
+      <h4>{{ valorCreditoEscolhido | currency }}</h4>
       <h2>pré-aprovado</h2>
     </div>
 
     <div>
       <p>Ajustar valor</p>
-      <mat-slider min="0" max="100000" step="20000">
-        <input matSliderThumb value="100000">
-      </mat-slider>
+      <input  type="range"
+        [value]="valorCreditoAprovado"
+        [(ngModel)]="valorCreditoEscolhido"
+        min="0"
+        [max]="valorCreditoAprovado"
+        [step]="valorCreditoAprovado/5"
+        (click)="zerarParcelaJuros()"
+        >
     </div>
 
     <div>
-      <button mat-stroked-button>Minimo</button>
-      <button mat-stroked-button>Máximo</button>
+      <button mat-stroked-button (click)="setMinimo()">Minimo</button>
+      <button mat-stroked-button (click)="setMaximo()">Máximo</button>
       <p>Escolha o valor acima e selecione ao lado o número de parcelas que cabem no seu bolso.</p>
     </div>
   </div>
@@ -64,11 +70,11 @@
     </div>
 
     <div>
-      <p>120 parcelas</p>
-      <!-- <p>
-        R$ 3.960,00
-      </p> -->
-      <button mat-flat-button color="warn">Financiar Agora</button>
+      <p>{{ parcelaSelecionada + " parcelas" }}</p>
+       <p>
+        {{ parcelaComJuros | currency}}
+      </p>
+      <button mat-flat-button color="warn" (click)="irParaTelaCadastro()">Financiar Agora</button>
     </div>
   </div>
 </div>

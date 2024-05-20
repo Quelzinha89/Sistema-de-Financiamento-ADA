@@ -1,8 +1,15 @@
 {
   "cliente": {
+<<<<<<< HEAD
     "nome": "camisas",
     "email": "a@com.br",
     "telefone": 112222222,
     "salario": 1600
+=======
+    "nome": "BERMUDA",
+    "email": "a@com.br",
+    "telefone": 112222222,
+    "salario": 1800
+>>>>>>> logica-tela-simulacao
   }
 }
