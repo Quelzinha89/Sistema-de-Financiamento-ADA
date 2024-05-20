@@ -1,5 +1,60 @@
+@import "../../../styles.scss";
+
 .container {
-    width: 830px;
-    margin: 0 auto;
-    display: flex;
+  width: 830px;
+  height: 628.79px;
+  margin: 95px 95px 95px 95px;
+  display: flex;
+}
+.container.cadastro-cabecalho {
+  width: 399px;
+  height: 514.79px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 36px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #232323;
+  margin-bottom: 48px;
+}
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 19.45px;
+  color: #848484;
+  margin-bottom: 48px;
+}
+
+form {
+  width: 399px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.01px;
+  column-gap: 14px;
+  color: #848484;
+}
+
+input {
+  width: 399px;
+  height: 18px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding: 18px 20px;
+  border-radius: $radius-padrao;
+  justify-content: space-between;
+  color: #232323;
+}
+
+button {
+  width: 444px;
+  height: 52px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 24px;
+  border-radius: $radius-padrao;
+  padding: 16px 68px;
+  background-color: $vermelho;
+  color: #ffffff;
+  justify-content: center;
 }
