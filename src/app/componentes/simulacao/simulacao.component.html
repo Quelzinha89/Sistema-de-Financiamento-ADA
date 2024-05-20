@@ -7,12 +7,12 @@
 <div class="main">
   <div class="box-slider">
     <div>
-      <h2>Você tem</h2>
-      <h4>{{ cliente.salario | currency }}</h4>
-      <h2>pré-aprovado</h2>
+      <h1>Você tem</h1>
+      <h2>{{ cliente.salario | currency }}</h2>
+      <h1>pré-aprovado</h1>
     </div>
 
-    <div>
+    <div class="mat-slider">
       <p>Ajustar valor</p>
       <mat-slider min="0" max="100000" step="20000">
         <input matSliderThumb value="100000">
