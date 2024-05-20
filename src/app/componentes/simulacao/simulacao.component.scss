@@ -1,12 +1,36 @@
-.container{
-  display:flex;
 
-.box-slide{
-  display:flex;
-  flex-direction: column;
+h1 {
+  color: rgba(35, 35, 35, 1);
+  font-size: 28px;
+  font-family: Verdana;
+  font-size: 28px;
+  font-weight: 400;
+  width: 320px;
+  height: 34px;
+
+
 }
 
+h2 {
+  color: #EC0000;
+  font-family: Verdana;
+  font-size: 40px;
+  font-weight: 400;
+  width: 399px;
+  height: 40px;
+  gap:48px;
+
 }
+
+p{
+  color: #848484;
+  font-family: Verdana;
+  font-size: 16px;
+  font-weight: 400;
+  width: 109px;
+  height: 19px;
+}
+
 .selected {
     background-color:  rgba(210, 138, 138, 0.05);
     border: 1px solid #EC0000;
@@ -15,7 +39,34 @@
 
 }
 
+
+// .mdc-slider input {
+//
+
+// }
+
 .main {
   display: flex;
   flex-direction: row;
+
 }
+
+.mat-slider  {
+  --mdc-slider-active-track-color: #AD1212;
+  --mdc-slider-handle-color: #EC0000;
+  --mdc-slider-focus-handle-color: #EC0000;
+
+      .mat-mdc-slider{
+
+      width: 287px;
+      height: 16px;
+    }
+
+
+
+    
+    
+
+  }
+
+
