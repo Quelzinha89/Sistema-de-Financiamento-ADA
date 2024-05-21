@@ -1,13 +1,10 @@
-<mat-progress-bar mode="determinate" value="100"   >
- <div class="cadastro-cabecalho-border" >
-   <h1 class="cadastro-titulo">Cadastro de Cliente</h1>
-</div>
+<mat-progress-bar mode="determinate" value="100" class="barra-progresso"   >
 </mat-progress-bar>
 
 
 <div class="main">
   <div class="box-slider">
-    <div>
+    <div class="texto-pre-aprovado">
       <h1>{{ textoCredito }}</h1>
       <h2>{{ valorCreditoEscolhido | currency }}</h2>
       <h1>pré-aprovado</h1>
@@ -25,9 +22,16 @@
         >
     </div>
 
-    <div>
-      <button mat-stroked-button (click)="setMinimo()">Minimo</button>
-      <button mat-stroked-button (click)="setMaximo()">Máximo</button>
+    <div class="botoes">
+      <div class="div-botao-minimo">
+        <button mat-stroked-button (click)="setMinimo()">Mínimo</button>
+      </div>
+
+      <div class="div-botao-maximo">
+        <button mat-stroked-button class="botao-maximo" (click)="setMaximo()">Máximo</button>
+      </div>
+    </div>
+    <div class="escolha-valor">
       <p>Escolha o valor acima e selecione ao lado o número de parcelas que cabem no seu bolso.</p>
     </div>
   </div>
