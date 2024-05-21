@@ -1,10 +1,9 @@
 @import "../../../styles.scss";
 
 .container {
-  display: flex;
-  width: 830px;
-  height: 628.79px;
   margin: 95px 95px 95px 95px;
+  display: flex;
+  justify-content: space-evenly;
 }
 .container.cadastro-cabecalho {
   height: 514.79px;
