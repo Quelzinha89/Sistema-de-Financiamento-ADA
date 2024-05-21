@@ -13,14 +13,14 @@
 
 h1 {
   color: $preto;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: $fonte-padrao;
   font-size: 36px;
   font-weight: 400;
   margin-bottom: 48px;
 }
 p {
   color: $cinza;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: $fonte-padrao;
   font-size: 16px;
   line-height: 19.45px;
   margin-bottom: 48px;
@@ -29,7 +29,7 @@ p {
 form {
   color: $cinza;
   column-gap: 14px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: $fonte-padrao;
   font-size: 14px;
   font-weight: 400;
   line-height: 17.01px;
@@ -51,7 +51,7 @@ button {
   background-color: $vermelho;
   border-radius: $radius-padrao;
   color: $branco;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: $fonte-padrao;
   justify-content: center;
   height: 52px;
   margin-top: 24px;
