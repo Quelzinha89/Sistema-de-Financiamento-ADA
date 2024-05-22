@@ -3,9 +3,10 @@
 .container {
 
   width: 830px;
-  height: 628.79px;
+  height: 515px;
   margin: 95px 95px 95px 95px;
   display: flex;
+  align-self: center;
 
 }
 .container.cadastro-cabecalho {
@@ -56,26 +57,25 @@ form {
   
    }
 
-.barra-progresso{
-  --mdc-linear-progress-active-indicator-color:#EC0000;
-}
-
 input {
   border-radius: $radius-padrao;
   color: $preto;
-  justify-content: space-between;
+  text-align: justify;
   height: 18px;
   margin-top: 14px;
   margin-bottom: 14px;
-  padding: 18px 20px;
-  width: 399px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  width: 377px;
   border-color: #848484;
   border-width: 0.75px;
   font-family: $fonte-padrao;
-  color:#D0D0D0;
 }
 
-
+::placeholder {
+  color:#D0D0D0;
+}
 
 button {
   background-color: $vermelho;
@@ -86,7 +86,7 @@ button {
   height: 52px;
   margin-top: 24px;
   padding: 16px 68px;
-  width: 444px;
+  width: 400px;
 }
 
 .btn-primary{
