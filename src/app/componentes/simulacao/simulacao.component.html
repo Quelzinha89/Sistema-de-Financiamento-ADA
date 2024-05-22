@@ -6,7 +6,8 @@
   <div class="box-slider">
     <div class="texto-pre-aprovado">
       <h1>{{ textoCredito }}</h1>
-      <h2>{{ valorCreditoEscolhido | currency }}</h2>
+      <h2  *ngIf="salario !== 0">{{ valorCreditoEscolhido | currency }}</h2>
+      <h2  *ngIf="valorCreditoEscolhido === 0 && salario === 0">----</h2>
       <h1>pré-aprovado</h1>
     </div>
 
