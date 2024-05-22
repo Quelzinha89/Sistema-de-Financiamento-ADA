@@ -9,14 +9,21 @@ git clone https://github.com/Quelzinha89/Sistema-de-Financiamento-ADA.git
 ```sh
 cd Sistema-de-Financiamento-ADA
 ```
-- Instalar as dependencias locais com o comendo abaixo:
+- Instalar as dependencias locais com o comando abaixo:
 ```sh
 npm install
 ```
-
+- Instalar json serve com o comendo abaixo:
+```sh
+npm install -g json-server
+```
 ## Instruções para rodar o sistema em ambiente local
 - Basta digitar no terminal o comando abaixo:
 ```sh
 ng serve
+```
+- Abra outro terminal e digite o comando abaixo:
+```sh
+json-server --watch banco.json
 ```
 Pronto! seu projeto estará rodando na porta http://localhost:4200
