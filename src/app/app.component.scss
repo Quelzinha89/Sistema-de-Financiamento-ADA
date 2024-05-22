@@ -1,2 +1,10 @@
+main{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
-
+.barra-progresso{
+  width: 100%;
+  --mdc-linear-progress-active-indicator-color:#EC0000;
+}

@@ -2,7 +2,7 @@
   "cliente": {
     "nome": "anderson",
     "email": "a@com.br",
-    "telefone": 113333,
-    "salario": 1700
+    "telefone": "112222-2222",
+    "salario": "1400"
   }
 }

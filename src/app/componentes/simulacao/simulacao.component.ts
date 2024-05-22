@@ -6,14 +6,25 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { NgClass } from '@angular/common';
 import { ClienteService } from '../../service/cliente.service';
 import { Cliente } from '../../model/cliente';
-import { CurrencyPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
+import { NgIf } from '@angular/common';
+import { CurrencyPipe } from '../../pipe/currency.pipe';
+
 
 @Component({
   selector: 'app-simulacao',
   standalone: true,
-  imports: [MatProgressBar,MatSliderModule,MatButtonModule,MatTooltipModule, NgClass, CurrencyPipe, FormsModule,RouterModule],
+  imports: [MatProgressBar,
+            MatSliderModule,
+            MatButtonModule,
+            MatTooltipModule,
+            NgClass,
+            CurrencyPipe,
+            FormsModule,
+            RouterModule,
+            NgIf
+          ],
   templateUrl: './simulacao.component.html',
   styleUrl: './simulacao.component.scss'
 })

@@ -52,6 +52,7 @@ p{
  width: 287px;
  height: 16px;
  background-color: #AD1212;
+ accent-color:#AD1212;
 }
 
 .botoes{
@@ -96,10 +97,6 @@ p{
 
 .texto-pre-aprovado{
   justify-content: flex-start;
-}
-
-.barra-progresso{
-  --mdc-linear-progress-active-indicator-color:#EC0000;
 }
 
 .main {
