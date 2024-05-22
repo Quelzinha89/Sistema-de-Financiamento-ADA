@@ -56,6 +56,8 @@
             class="form-control"
             id="salario"
             name="salario"
+            pattern="[0-9]*"
+            inputmode="numeric"
             ngModel
             required
             placeholder="Insira seu salário aqui..."
@@ -65,7 +67,7 @@
           Simular financiamento
         </button>
       </form>
-      <p>{{ mensagem }}</p>
+      <p class="mensagem">{{ mensagem }}</p>
     </div>
   </main>
 </div>
