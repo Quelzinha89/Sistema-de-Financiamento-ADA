@@ -1,13 +1,19 @@
 @import "../../../styles.scss";
 
 .container {
+
+  width: 830px;
+  height: 628.79px;
   margin: 95px 95px 95px 95px;
   display: flex;
-  justify-content: space-evenly;
+
 }
 .container.cadastro-cabecalho {
-  height: 514.79px;
-  width: 399px;
+  display: flex;
+  height: 515px;
+  width: 400px;
+  align-items: baseline;
+  justify-content: flex-start;
 }
 
 h1 {
@@ -15,7 +21,9 @@ h1 {
   font-family: $fonte-padrao;
   font-size: 36px;
   font-weight: 400;
-  margin-bottom: 48px;
+  margin-bottom: 28px;
+  margin:0;
+  padding:0;
 }
 p {
   color: $cinza;
@@ -26,6 +34,7 @@ p {
 }
 
 form {
+
   color: $cinza;
   column-gap: 14px;
   font-family: $fonte-padrao;
@@ -33,6 +42,22 @@ form {
   font-weight: 400;
   line-height: 17.01px;
   width: 399px;
+ 
+
+}
+
+.forms-id {
+
+  font-size: 14px;
+  font-family: $fonte-padrao;
+  font-weight: 400;
+  line-height: 17.01px;
+  color:#848484
+  
+   }
+
+.barra-progresso{
+  --mdc-linear-progress-active-indicator-color:#EC0000;
 }
 
 input {
@@ -44,7 +69,13 @@ input {
   margin-bottom: 14px;
   padding: 18px 20px;
   width: 399px;
+  border-color: #848484;
+  border-width: 0.75px;
+  font-family: $fonte-padrao;
+  color:#D0D0D0;
 }
+
+
 
 button {
   background-color: $vermelho;
@@ -56,4 +87,10 @@ button {
   margin-top: 24px;
   padding: 16px 68px;
   width: 444px;
+}
+
+.btn-primary{
+  background-color: #EC0000;
+  border-color: #EC0000;
+  border-width: 0.75px;
 }

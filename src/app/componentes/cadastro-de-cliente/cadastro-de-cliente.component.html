@@ -1,8 +1,5 @@
-<mat-progress-bar mode="determinate" value="100"   >
-  <div class="cadastro-cabecalho-border" >
-    <img src=""/>
-    <h1 class="cadastro-titulo">Cadastro de Cliente</h1>
-  </div>
+<mat-progress-bar mode="determinate" value="100" class="barra-progresso"  >
+  <div class="cadastro-cabecalho-border" ></div>
 </mat-progress-bar>
 
 <div class="container">
@@ -16,7 +13,7 @@
   </div>
 
   <main class="formulario-cadastro">
-    <div>
+    <div class="forms-id">
       <form #cliente="ngForm" (ngSubmit)="adicionarCliente(cliente)">
         <div class="form-group">
           <label for="nome">Nome Completo</label>
