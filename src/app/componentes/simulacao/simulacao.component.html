@@ -34,9 +34,10 @@
   </div>
 
   <div class="box-output">
-    <div>
-      <p>Selecione o número de parcelas</p>
-      <button mat-raised-button
+    <p>Selecione o número de parcelas</p>
+    <div class="buttonFlex">
+      <div>
+      <button class="button-styles" mat-raised-button
               (click)="selecionarParcelas(300)"
               [ngClass]="{'selected': parcelaSelecionada === 300}"
               matTooltip="Info about the action"
@@ -44,15 +45,16 @@
               300 parcelas
     </button>
 
-    <button mat-raised-button
+    <button class="button-styles" mat-raised-button
             (click)="selecionarParcelas(180)"
             [ngClass]="{'selected': parcelaSelecionada === 180}"
             matTooltip="Info about the action"
             aria-label="Button that displays a tooltip when focused or hovered over">
             180 parcelas
     </button>
-
-    <button mat-raised-button
+  </div>
+  <div>
+    <button class="button-styles" mat-raised-button
             (click)="selecionarParcelas(120)"
             [ngClass]="{'selected': parcelaSelecionada === 120}"
             matTooltip="Info about the action"
@@ -60,14 +62,14 @@
             120 parcelas
     </button>
 
-    <button mat-raised-button
+    <button class="button-styles" mat-raised-button
             (click)="selecionarParcelas(60)"
             [ngClass]="{'selected': parcelaSelecionada === 60}"
             matTooltip="Info about the action"
             aria-label="Button that displays a tooltip when focused or hovered over">
             60 parcelas
     </button>
-
+  </div>
     </div>
 
     <div>
