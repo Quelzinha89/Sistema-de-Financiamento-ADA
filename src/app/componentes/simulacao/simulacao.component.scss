@@ -1,3 +1,13 @@
+.main {
+
+  width: 830px;
+  height: 515px;
+  margin: 95px 95px 95px 95px;
+  display: flex;
+  align-self: center;
+
+}
+
 h1 {
   color: rgba(35, 35, 35, 1);
   font-size: 28px;
@@ -39,14 +49,24 @@ p{
   }
 }
 
+.button-styles{
+  padding: 16px 18px 16px 18px;
+  margin: 10px 10px 10px 0px;
+  width: 165px;
+  height: 56px;
+  border: 1px solid;
+  border-radius: 8px;
+  color: #848484 !important;
+  border-color: #848484 !important;
+}
 
 .selected {
   background-color: rgba(107, 31, 31, 0.05) !important;
   color: #EC0000 !important;
-  border: 1px solid #EC0000;
+  border: 1px solid;
   border-radius: 8px;
+  border-color: #EC0000 !important;
 }
-
 
 .mat-slider input {
  width: 287px;
@@ -73,8 +93,6 @@ p{
   height: 41px;
   border-radius: 8px;
   --mdc-outlined-button-label-text-color: #848484;
-
-
 }
 
 .div-botao-maximo{
@@ -105,31 +123,21 @@ p{
 
 }
 
-.buttonflex{
+.button-flex{
   display: flex;
   flex-direction:   column;
   justify-content: space-around;
+}
 
+.button-row{
+  display:flex;
+  justify-content: flex-start;
 }
-.button-style{
-  padding: 16px 18px 16px 18px;
-  margin: 10px;
-  width: 165px;
-  height: 56px;
 
+.button-styles .mat-mdc-raised-button{
+--mdc-outlined-button-label-text-color:#5E5E5E;
 }
-h3{
-  width: 175px;
-  height: 34px;
-  gap: 0px;
-  opacity: 0px;
-  font-family: Verdana;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 34.03px;
-  text-align: left;
-  color: #EC0000;
-}
+
 .Botao-financiar{
   width: 399px;
   height: 49px;
@@ -141,4 +149,20 @@ h3{
 
 }
 
+.box-output{
+  color:#848484
+}
 
+.valor-parcela{
+  color:#EC0000
+}
+
+.Ir-para-home{
+  width: 399px;
+  height: 49px;
+  border-radius: 8px;
+}
+
+.selecione-text{
+  color: #232323;
+}

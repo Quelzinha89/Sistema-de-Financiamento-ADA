@@ -34,26 +34,25 @@
   </div>
 
   <div class="box-output">
-    <p>Selecione o número de parcelas</p>
-    <div class="buttonFlex">
-      <div>
-      <button class="button-styles" mat-raised-button
-              (click)="selecionarParcelas(300)"
-              [ngClass]="{'selected': parcelaSelecionada === 300}"
-              matTooltip="Info about the action"
-              aria-label="Button that displays a tooltip when focused or hovered over">
-              300 parcelas
-    </button>
-
-    <button class="button-styles" mat-raised-button
+    <p class="selecione-text">Selecione o número de parcelas</p>
+    <div class="button-flex">
+      <div class=button-row>
+        <button class="button-styles" mat-raised-button
+                (click)="selecionarParcelas(300)"
+                [ngClass]="{'selected': parcelaSelecionada === 300}"
+                matTooltip="Info about the action"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+                300 parcelas
+        </button>
+        <button class="button-styles" mat-raised-button
             (click)="selecionarParcelas(180)"
             [ngClass]="{'selected': parcelaSelecionada === 180}"
             matTooltip="Info about the action"
             aria-label="Button that displays a tooltip when focused or hovered over">
             180 parcelas
-    </button>
-  </div>
-  <div>
+        </button>
+      </div>
+  <div class=button-row>
     <button class="button-styles" mat-raised-button
             (click)="selecionarParcelas(120)"
             [ngClass]="{'selected': parcelaSelecionada === 120}"
@@ -77,10 +76,10 @@
        <p *ngIf="salario !== 0">
         {{ parcelaComJuros | currency}}
       </p>
-      <p *ngIf="valorCreditoEscolhido === 0 && salario === 0">
+      <p *ngIf="valorCreditoEscolhido === 0 && salario === 0" class="valor-parcela">
         R$----
       </p>
-      <button mat-flat-button color="warn" (click)="irParaTelaCadastro()">Ir para home</button>
+      <button class="Ir-para-home" mat-flat-button color="warn" (click)="irParaTelaCadastro()">Ir para home</button>
     </div>
   </div>
 </div>
