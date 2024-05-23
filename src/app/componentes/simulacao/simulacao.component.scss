@@ -6,29 +6,24 @@ h1 {
   font-weight: 400;
   width: 320px;
   height: 34px;
-
-
 }
 
 h2 {
-  color: #EC0000;
+  color: #ec0000;
   font-family: Verdana;
   font-size: 40px;
   font-weight: 400;
   width: 399px;
   height: 40px;
-  gap:48px;
-
-
+  gap: 48px;
 }
 
-p{
+p {
   color: #848484;
   font-family: Verdana;
   font-size: 16px;
   font-weight: 400;
 }
-
 
 .container {
   display: flex;
@@ -39,23 +34,21 @@ p{
   }
 }
 
-
 .selected {
   background-color: rgba(107, 31, 31, 0.05) !important;
-  color: #EC0000 !important;
-  border: 1px solid #EC0000;
+  color: #ec0000 !important;
+  border: 1px solid #ec0000;
   border-radius: 8px;
 }
 
-
 .mat-slider input {
- width: 287px;
- height: 16px;
- background-color: #AD1212;
- accent-color:#AD1212;
+  width: 287px;
+  height: 16px;
+  background-color: #ad1212;
+  accent-color: #ad1212;
 }
 
-.botoes{
+.botoes {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -65,46 +58,91 @@ p{
   padding-left: 14px;
   padding-right: 14px;
   align-items: baseline;
-
 }
 
-.div-botao-minimo{
+.div-botao-minimo {
   width: 79px;
   height: 41px;
   border-radius: 8px;
   --mdc-outlined-button-label-text-color: #848484;
-
-
 }
 
-.div-botao-maximo{
+.div-botao-maximo {
   width: 83px;
   height: 41px;
   border-radius: 8px;
-  --mdc-outlined-button-label-text-color: #EC0000;
+  --mdc-outlined-button-label-text-color: #ec0000;
 }
 
-.botao-maximo{
-  border: 1px solid #EC0000 !important;
+.botao-maximo {
+  border: 1px solid #ec0000 !important;
 }
 
-.escolha-valor{
-  padding-top: 50px;
+.escolha-valor {
+  padding-top: auto;
   justify-content: center;
   width: 288px;
   height: 57px;
+  gap: 0px;
+  opacity: 0px;
 }
 
-.texto-pre-aprovado{
+.texto-pre-aprovado {
   justify-content: flex-start;
 }
 
 .main {
   display: flex;
   flex-direction: row;
-
+  justify-content: center;
+  margin-top: 178px;
 }
 
-
-
-
+.buttonflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.button-style {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #5e5e5e;
+  padding: 16px 18px 16px 18px;
+  margin: 10px;
+  width: 165px;
+  height: 56px;
+}
+h3 {
+  width: 175px;
+  height: 34px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Verdana;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34.03px;
+  text-align: left;
+  color: #ec0000;
+}
+.Botao-financiar {
+  width: 399px;
+  height: 49px;
+  padding: 16px 68px 16px 68px;
+  gap: 10px;
+  opacity: 0px;
+  background: #ec0000;
+}
+.ajusta-div {
+  display: flex;
+  width: 288px;
+  height: 57px;
+  gap: 0px;
+  opacity: 0px;
+}
+.box-slider {
+  width: 399px;
+  height: 386px;
+  gap: 48px;
+  opacity: 0px;
+}
