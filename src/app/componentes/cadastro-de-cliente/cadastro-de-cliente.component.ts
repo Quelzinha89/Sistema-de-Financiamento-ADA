@@ -16,11 +16,12 @@ import { MatProgressBar } from '@angular/material/progress-bar';
   styleUrl: './cadastro-de-cliente.component.scss',
 })
 export class CadastroDeClienteComponent {
+
   public mensagem = '';
 
   constructor(private http: ClienteService, private router: Router) {}
 
-  public adicionarCliente(clienteValue: any) {
+  public adicionarCliente(clienteValue: any): void {
     if (clienteValue.valid) {
       //todos campos preenchidos
       const novoCliente = {
@@ -37,11 +38,9 @@ export class CadastroDeClienteComponent {
           console.log(error);
         }
       );
-
       setTimeout(()=>{
         this.router.navigate(['/simulacao']);
       }, 1000)
-
     } else {
       //preencher tds campos
       this.mensagem = '*Preencha todos os campos corretamente';

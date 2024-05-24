@@ -64,20 +64,15 @@ export class SimulacaoComponent {
       this.parcelaSelecionada = 0;
     }
   }
-
-
-  public selecionarParcelas(quantParcelas: number): void{
+  selecionarParcelas(quantParcelas: number): void {
     this.parcelaSelecionada = quantParcelas;
     let parcelaSemJuros = this.valorCreditoEscolhido/quantParcelas;
     this.parcelaComJuros = parcelaSemJuros + (this.valorCreditoEscolhido/100)
-
-
   }
-  zerarParcelaJuros(){
+  zerarParcelaJuros(): void {
     this.parcelaComJuros = 0;
     this.parcelaSelecionada = 0;
   }
-
   setMaximo(): void {
     this.valorCreditoEscolhido = this.valorCreditoAprovado;
     this.parcelaComJuros = 0;
@@ -90,11 +85,8 @@ export class SimulacaoComponent {
     this.parcelaComJuros = 0;
     this.parcelaSelecionada = 0;
     this.textoParcelas = ""
-
   }
-  irParaTelaCadastro(){
+  irParaTelaCadastro(): void{
     this.router.navigate(['/'])
   }
-
-
 }
