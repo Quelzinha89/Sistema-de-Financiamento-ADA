@@ -38,7 +38,10 @@ export class CadastroDeClienteComponent {
         }
       );
 
-      this.router.navigate(['/simulacao']);
+      setTimeout(()=>{
+        this.router.navigate(['/simulacao']);
+      }, 1000)
+
     } else {
       //preencher tds campos
       this.mensagem = '*Preencha todos os campos corretamente';

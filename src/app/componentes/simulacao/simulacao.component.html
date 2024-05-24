@@ -73,7 +73,7 @@
 
     <div>
       <p >{{ parcelaSelecionada + " parcelas" }}</p>
-       <p *ngIf="salario !== 0">
+       <p *ngIf="salario !== 0" class="valor-parcela" >
         {{ parcelaComJuros | currency}}
       </p>
       <p *ngIf="valorCreditoEscolhido === 0 && salario === 0" class="valor-parcela">
