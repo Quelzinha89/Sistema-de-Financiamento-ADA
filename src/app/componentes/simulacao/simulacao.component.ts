@@ -61,6 +61,7 @@ export class SimulacaoComponent {
       this.selecionarParcelas(this.parcelaSelecionada)
     }else{
       this.textoCredito = "Você não tem limite"
+      this.parcelaSelecionada = 0;
     }
   }
 
@@ -80,12 +81,14 @@ export class SimulacaoComponent {
   setMaximo(): void {
     this.valorCreditoEscolhido = this.valorCreditoAprovado;
     this.parcelaComJuros = 0;
+    this.parcelaSelecionada = 0;
     this.textoParcelas = ""
 
   }
   setMinimo(): void {
     this.valorCreditoEscolhido = 0;
     this.parcelaComJuros = 0;
+    this.parcelaSelecionada = 0;
     this.textoParcelas = ""
 
   }
