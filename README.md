@@ -1,4 +1,5 @@
 # Sistema de Financiamento ADA
+Sistema de financiamento ADA em front-end utilizando Angular, com sua estrutura robusta e componentes reutilizáveis.
 
 ## Instruções para instalação
 - Clonar esse repositório utilizando o comando abaixo:
